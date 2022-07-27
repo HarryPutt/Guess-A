@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct allBlacksPlayerView: View {
+struct AllBlacksLevels: View {
     var body: some View {
         Text("Harry was here")
     }
 }
 
-struct allBlacksPlayerView_Previews: PreviewProvider {
+struct AllBlacksLevels_Previews: PreviewProvider {
     static var previews: some View {
-        allBlacksPlayerView()
+        AllBlacksLevels()
     }
 }
