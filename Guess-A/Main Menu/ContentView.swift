@@ -15,7 +15,7 @@ struct ContentView: View {
             
             List{
 
-                NavigationLink(destination: numberView()) { Text("Guess a number") }
+                NavigationLink(destination: numberLevels()) { Text("Guess a number") }
                 
                    
                 NavigationLink(destination: nbaTeamView()) { Text("Guess a NBA team") }
@@ -24,7 +24,7 @@ struct ContentView: View {
                 NavigationLink(destination: playingCardView()) {Text("Guess a Playing Card") }
 
                 NavigationLink(
-                    destination: pokemonView()) { Text("Guess a Pokemon") }
+                    destination: pokemonLevels()) { Text("Guess a Pokemon") }
                 
                 NavigationLink(destination: marvelView()) { Text("Guess a Marvel Character") }
                 NavigationLink(destination: carBrandView()) { Text("Guess a Car Brand") }
@@ -39,15 +39,12 @@ struct ContentView: View {
 
             .navigationTitle("Guess-A")
             .toolbar {
-                Button("Help"){
+                Button("help") {
                     showHelp()
-                                }
+                        }
             }
-            
-            
+
         }
-
-
     }
 }
 struct BlueButton: ButtonStyle {
