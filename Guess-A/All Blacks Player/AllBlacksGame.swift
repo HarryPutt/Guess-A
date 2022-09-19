@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct AllBlacksGame: View {
+    
+    @State private var guess = ""
     var body: some View {
-        Text("Harry waz 'ere!")
+        VStack{
+            TextField("Harry waz 'ere!", text: $guess)
+                .padding(5)
+                .border(.black, width: 2.0)
+                .padding(15)
+        }
     }
 }
 
