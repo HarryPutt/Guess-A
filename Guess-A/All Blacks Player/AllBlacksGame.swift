@@ -7,12 +7,19 @@
 
 import SwiftUI
 
+func randomPlayer(difficulty: String) -> String {
+    if difficulty == "easy" {
+        return playersEasy.playersE(Int.random(in: 0...15))
+    }
+}
 struct AllBlacksGame: View {
-    
+    var level: String
     @State private var guess = ""
+    @State private var answer = randomPlayer(level)
     
     var body: some View {
         VStack{
+            Image("George Bower")
             TextField("Guess the player here", text: $guess)
                 .padding(5)
                 .border(.black, width: 2.0)
@@ -30,6 +37,6 @@ struct AllBlacksGame: View {
 
 struct AllBlacksGame_Previews: PreviewProvider {
     static var previews: some View {
-        AllBlacksGame()
+        AllBlacksGame(level: "")
     }
 }

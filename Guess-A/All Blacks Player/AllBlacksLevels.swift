@@ -32,13 +32,13 @@ struct AllBlacksLevels: View {
                     .frame(width: 160, height: 1)
                     .foregroundColor(.white)
                 VStack {
-                    NavigationLink(destination: AllBlacksGame()) {
+                    NavigationLink(destination: AllBlacksGame(level: "easy")) {
                         Text("Easy")
                             .foregroundColor(.white)
                             .background(RoundedRectangle(cornerRadius: 18).fill(Color.green).frame(width: 165, height: 50))
                     }
                     .padding(20)
-                    NavigationLink(destination: AllBlacksGame()) {
+                    NavigationLink(destination: AllBlacksGame(level: "hard")) {
                         Text("Hard")
                             .foregroundColor(.white)
                             .background(RoundedRectangle(cornerRadius: 18).fill(Color.red).frame(width: 165, height: 50))
