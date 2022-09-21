@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+var randomNum = 0
+
+func randomPlayer() -> String {
+    randomNum = Int.random(in: 0...14)
+    return playersEasy.playersE[randomNum]
+}
+
+
 struct AllBlacksLevels: View {
     var body: some View {
         VStack {
@@ -32,13 +40,13 @@ struct AllBlacksLevels: View {
                     .frame(width: 160, height: 1)
                     .foregroundColor(.white)
                 VStack {
-                    NavigationLink(destination: AllBlacksGame(level: "easy")) {
+                    NavigationLink(destination: AllBlacksGame(level: "easy", correct: randomPlayer())) {
                         Text("Easy")
                             .foregroundColor(.white)
                             .background(RoundedRectangle(cornerRadius: 18).fill(Color.green).frame(width: 165, height: 50))
                     }
                     .padding(20)
-                    NavigationLink(destination: AllBlacksGame(level: "hard")) {
+                    NavigationLink(destination: AllBlacksGame(level: "hard", correct: randomPlayer())) {
                         Text("Hard")
                             .foregroundColor(.white)
                             .background(RoundedRectangle(cornerRadius: 18).fill(Color.red).frame(width: 165, height: 50))
